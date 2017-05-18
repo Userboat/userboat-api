@@ -10,10 +10,10 @@ Toutes les demandes d'API doivent être effectuées sur HTTPS. Les appels effect
 ### /api/auth/jwt 
 __`POST`__
 
-{% sample lang="curl" %}
+{% sample lang="bash" %}
 Here is how to print a message to `stdout` using JavaScript.
 
-```curl
+```bash 
 curl http://app.userboat.com/api/auth/jwt \
    -H "Content-Type: application/json"
    -d '{"usernameOrEmailAddress":"VOTRE_EMAIL","password":"VOTRE_PASSWORD"}'

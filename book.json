@@ -4,8 +4,8 @@
         "theme-api": {
             "languages": [
                 {
-                    "lang": "curl",
-                    "name": "curl",
+                    "lang": "bash",
+                    "name": "cURL",
                     "default": true
                 }
             ]
