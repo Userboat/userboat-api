@@ -10,23 +10,23 @@ Toutes les demandes d'API doivent être effectuées sur HTTPS. Les appels effect
 ### /api/auth/jwt 
 __`POST`__
 
-{% sample lang="js" %}
+{% sample lang="curl" %}
 Here is how to print a message to `stdout` using JavaScript.
 
-```js
-console.log('My first method');
-```
-
-{% sample lang="go" %}
-Here is how to print a message to `stdout` using Go.
-
-```go
-fmt.Println("My first method")
+```curl
+curl http://app.userboat.com/api/auth/jwt \
+   -H "Content-Type: application/json"
+   -d '{"usernameOrEmailAddress":"VOTRE_EMAIL","password":"VOTRE_PASSWORD"}'
 ```
 
 {% common %}
-Whatever language you are using, the result will be the same.
-
-
+```javascript
+{
+  "accessToken": "VOTRE_CLEF",
+  "encryptedAccessToken": null,
+  "expireInSeconds": 86400,
+  "userId": 0
+}
+```
 
 {% endmethod %}
