@@ -7,4 +7,5 @@
 ## Méthodes
 
 * [Authentification](authentification.md)
+* [Membres](members.md)
 

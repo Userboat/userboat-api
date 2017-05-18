@@ -12,7 +12,6 @@ Toutes les demandes d'API doivent être effectuées sur HTTPS. Les appels effect
 Il faut passer les paramètres `usernameOrEmailAddress` et `password` à cette méthode afin de recevoir votre token. Il faudra stocker ce token de votre côté, car celui-ci est requis pour chaque appel subséquent.
 
 {% sample lang="bash" %}
-
 ```bash 
 curl http://app.userboat.com/api/auth/jwt \
    -H "Content-Type: application/json"
@@ -28,5 +27,4 @@ curl http://app.userboat.com/api/auth/jwt \
   "userId": 0
 }
 ```
-
 {% endmethod %}
