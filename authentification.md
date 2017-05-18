@@ -7,8 +7,9 @@ L'authentification à l'API est effectuée via JSON Web Token. Authentifiez votr
 Toutes les demandes d'API doivent être effectuées sur HTTPS. Les appels effectués sur HTTP simple échoueront. Les demandes API sans authentification échoueront également.
 
 {% method %}
-### /api/auth/jwt 
-__`POST`__
+### /api/auth/jwt - __`POST`__
+
+Il faut passer les paramètres `usernameOrEmailAddress` et `password` à cette méthode afin de recevoir votre token. Il faudra stocker ce token de votre côté, car celui-ci est requis pour chaque appel subséquent.
 
 {% sample lang="bash" %}
 
