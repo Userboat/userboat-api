@@ -11,7 +11,6 @@ Toutes les demandes d'API doivent être effectuées sur HTTPS. Les appels effect
 __`POST`__
 
 {% sample lang="bash" %}
-Here is how to print a message to `stdout` using JavaScript.
 
 ```bash 
 curl http://app.userboat.com/api/auth/jwt \
