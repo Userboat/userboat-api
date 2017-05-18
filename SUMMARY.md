@@ -4,7 +4,7 @@
 
 * [Introduction](README.md)
 
-## Methods
+## Méthodes
 
 * [Authentification](authentification.md)
 
