@@ -39,3 +39,47 @@ curl https://app.userboat.com/api/members/{ID} \
 L'objet retourné est celui du membre, comme décrit ci-haut.
 
 {% endmethod %}
+
+{% method %}
+### /api/members - __`PUT`__
+
+Met à jour les détails d'un membre existant.
+
+| Paramètre | Description |
+| :--- | :--- |
+| _id_ | Identifiant unique du membre. |
+| _properties_ | Série de propriétés dans le but modifier les informations du membre. |
+
+{% sample lang="bash" %}
+```bash 
+curl https://app.userboat.com/api/members/{ID} \
+   -H "Content-Type: application/json"
+   -H "Authorization: Bearer {ACCESS_TOKEN}"
+   -d '{"email":"NOUVEAU_COURRIEL"}'
+```
+
+{% common %}
+L'objet retourné est celui du membre, comme décrit ci-haut.
+
+{% endmethod %}
+
+{% method %}
+### /api/members - __`DELETE`__
+
+Supprime un membre.
+
+| Paramètre | Description |
+| :--- | :--- |
+| _id_ | Identifiant unique du membre. |
+
+{% sample lang="bash" %}
+```bash 
+curl https://app.userboat.com/api/members/{ID} \
+   -H "Content-Type: application/json"
+   -H "Authorization: Bearer {ACCESS_TOKEN}"
+```
+
+{% common %}
+L'objet retourné sera vide en cas de succès.
+
+{% endmethod %}
