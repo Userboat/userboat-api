@@ -7,7 +7,7 @@ Par défaut lorsqu'un membre vous est retourné, l'ensemble de ces valeurs seron
 | _id_ | Identifiant unique du membre. Cet identifiant est utilisé pour toutes les méthodes qui requièrent les données d'un membre en particulier. |
 | _properties_ | Cette propriété contient l'ensemble des informations du membre. Par défaut, cette propriété contient toujours la valeur `email`. |
 | _groupIds_ | Cette propriété contient l'ensemble des informations du membre. Par défaut, cette propriété contient toujours la valeur `email`. |
-| _paymentOptions_ | Méthode(s) de paiement utilisé par le membre. |
+| _subscriptions_ | Méthode(s) de paiement utilisé par le membre. |
 | _invoices_ | Facture(s) liées au membre. |
 | _creatonTime_ | Date de création du membre sous format `UTC`. |
 
