@@ -10,12 +10,18 @@ Par défaut lorsqu'un membre vous est retourné, l'ensemble de ces valeurs seron
 
 ```javascript
 {
-  "id": "{MEMBER_ID}",
-  "properties": {
-    "email": "{MEMBER_EMAIL}"
+  id: "{MEMBER_ID}",
+  properties: {
+    email: "{MEMBER_EMAIL}"
     // ...
   },
-  "creationTime": "{MEMBER_CREATION_TIME}"
+  creationTime: "{MEMBER_CREATION_TIME}",
+  subscriptions: {
+    // ...
+  },
+  invoices: {
+    // ...
+  }
 }
 ```
 
@@ -33,6 +39,30 @@ Récupère les détails d'un membre existant.
 curl https://app.userboat.com/api/members/{ID} \
    -H "Content-Type: application/json"
    -H "Authorization: Bearer {ACCESS_TOKEN}"
+```
+
+{% common %}
+L'objet retourné est celui du membre, comme décrit ci-haut.
+
+{% endmethod %}
+
+{% method %}
+### /api/members - __`POST`__
+
+Crée un membre.
+
+| Paramètre | Description |
+| :--- | :--- |
+| _properties_ | Série de propriétés dans le but modifier les informations du membre. |
+| _groupIds_ | Liste contenant les identifiants des groupes auxquels il faut associer le membre. |
+
+{% sample lang="bash" %}
+```bash 
+curl https://app.userboat.com/api/members/{ID} \
+   -H "Content-Type: application/json"
+   -H "Authorization: Bearer {ACCESS_TOKEN}"
+   -d '{"properties": { "email":"grobert@spektrummedia.com" } }'
+   -d '{"groupIds": [ "groupdId", "groupdId" ] }'
 ```
 
 {% common %}
