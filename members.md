@@ -61,8 +61,8 @@ Crée un membre.
 curl https://app.userboat.com/api/members/{ID} \
    -H "Content-Type: application/json"
    -H "Authorization: Bearer {ACCESS_TOKEN}"
-   -d '{"properties": { "email":"grobert@spektrummedia.com" } }'
-   -d '{"groupIds": [ "groupdId", "groupdId" ] }'
+   -d '{"properties": { "email":"COURRIEL" } }'
+   -d '{"groupIds": [ "ID_GROUP1", "ID_GROUP2" ] }'
 ```
 
 {% common %}
