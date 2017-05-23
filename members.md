@@ -9,7 +9,7 @@ Par défaut lorsqu'un membre vous est retourné, l'ensemble de ces valeurs seron
 | _groupIds_ | Cette propriété contient l'ensemble des informations du membre. Par défaut, cette propriété contient toujours la valeur `email`. |
 | _subscriptions_ | Méthode(s) de paiement utilisé par le membre. |
 | _invoices_ | Facture(s) liées au membre. |
-| _creatonTime_ | Date de création du membre sous format `UTC`. |
+| _creationTime_ | Date de création du membre sous format `UTC`. |
 
 ```javascript
 {
