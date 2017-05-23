@@ -30,7 +30,7 @@ Par défaut lorsqu'un membre vous est retourné, l'ensemble de ces valeurs seron
 ```
 
 {% method %}
-### /api/members - __`GET`__
+### /api/v1/members - __`GET`__
 
 Récupère les détails d'un membre existant.
 
@@ -40,7 +40,7 @@ Récupère les détails d'un membre existant.
 
 {% sample lang="bash" %}
 ```bash 
-curl https://app.userboat.com/api/members/{ID} \
+curl https://app.userboat.com/api/v1/members/{ID} \
    -H "Content-Type: application/json"
    -H "Authorization: Bearer {ACCESS_TOKEN}"
 ```
@@ -51,7 +51,7 @@ L'objet retourné est celui du membre, comme décrit ci-haut.
 {% endmethod %}
 
 {% method %}
-### /api/members - __`POST`__
+### /api/v1/members - __`POST`__
 
 Crée un membre.
 
@@ -62,7 +62,7 @@ Crée un membre.
 
 {% sample lang="bash" %}
 ```bash 
-curl https://app.userboat.com/api/members/{ID} \
+curl https://app.userboat.com/api/v1/members/{ID} \
    -H "Content-Type: application/json"
    -H "Authorization: Bearer {ACCESS_TOKEN}"
    -d '{"properties": { "email":"COURRIEL" } }'
@@ -75,7 +75,7 @@ L'objet retourné est celui du membre, comme décrit ci-haut.
 {% endmethod %}
 
 {% method %}
-### /api/members - __`PUT`__
+### /api/v1/members - __`PUT`__
 
 Met à jour les détails d'un membre existant.
 
@@ -86,7 +86,7 @@ Met à jour les détails d'un membre existant.
 
 {% sample lang="bash" %}
 ```bash 
-curl https://app.userboat.com/api/members/{ID} \
+curl https://app.userboat.com/api/v1/members/{ID} \
    -H "Content-Type: application/json"
    -H "Authorization: Bearer {ACCESS_TOKEN}"
    -d '{"email":"NOUVEAU_COURRIEL"}'
@@ -98,7 +98,7 @@ L'objet retourné est celui du membre, comme décrit ci-haut.
 {% endmethod %}
 
 {% method %}
-### /api/members - __`DELETE`__
+### /api/v1/members - __`DELETE`__
 
 Supprime un membre.
 
@@ -108,7 +108,7 @@ Supprime un membre.
 
 {% sample lang="bash" %}
 ```bash 
-curl https://app.userboat.com/api/members/{ID} \
+curl https://app.userboat.com/api/v1/members/{ID} \
    -H "Content-Type: application/json"
    -H "Authorization: Bearer {ACCESS_TOKEN}"
 ```

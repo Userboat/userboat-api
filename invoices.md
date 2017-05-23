@@ -23,7 +23,7 @@ Par défaut lorsqu'une facture vous est retournée, l'ensemble de ces valeurs se
 ```
 
 {% method %}
-### /api/invoices - __`GET`__
+### /api/v1/invoices - __`GET`__
 
 Récupère les détails d'une facture existante.
 
