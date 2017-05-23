@@ -1,4 +1,4 @@
-# Facture
+# Factures
 
 Par défaut lorsqu'une facture vous est retournée, l'ensemble de ces valeurs seront retournées systématiquement.
 
