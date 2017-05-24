@@ -23,13 +23,9 @@ Par défaut lorsqu'une facture vous est retournée, l'ensemble de ces valeurs se
 ```
 
 {% method %}
-### /api/v1/invoices - `GET`
+### /api/v1/invoices/{ID} - `GET`
 
 Récupère les détails d'une facture existante.
-
-| Paramètre | Description |
-| :--- | :--- |
-| _id_ | Identifiant unique de la facture. |
 
 {% sample lang="bash" %}
 ```bash 
@@ -44,18 +40,14 @@ L'objet retourné est celui de la facture, comme décrit ci-haut.
 {% endmethod %}
 
 {% method %}
-### /api/v1/invoices - `DELETE`
+### /api/v1/invoices/{ID} - `DELETE`
 
 Supprime une facture.
-
-| Paramètre | Description |
-| :--- | :--- |
-| _id_ | Identifiant unique de la facture. |
 
 {% sample lang="bash" %}
 ```bash 
 curl https://app.userboat.com/api/v1/invoices/{ID} \
-   -H "Content-Type: application/json"
+   -H "Content-Type: application/json" \
    -H "Authorization: Bearer {ACCESS_TOKEN}"
 ```
 
@@ -72,19 +64,39 @@ Ajouter un paiement à une facture.
 
 | Paramètre | Description |
 | :--- | :--- |
-| _id_ | Identifiant unique de la facture. |
 | _amount_ | Montant payé. Celui-ci peut-être inférieur ou supérieur au total de la facture. |
 | _reference_ | Référence au paiement. Dans le cas de Stripe, celà peut être un idenfiant de paiement. Pour un paiement manuel, un numéro de chèque par exemple. |
 | _note_ | Divers. |
 
 {% sample lang="bash" %}
 ```bash 
+
 curl https://app.userboat.com/api/v1/invoices/{INVOICE_ID}/charges \
-   -H "Content-Type: application/json"
-   -H "Authorization: Bearer {ACCESS_TOKEN}"
+   -H "Content-Type: application/json" \
+   -H "Authorization: Bearer {ACCESS_TOKEN}" \
+   -d '{"amount": 10, "reference": "{ANY_REFERENCE}", "note": "{ANY_NOTE}", "chargeType": "stripe"}'
 ```
 
 {% common %}
 L'objet retourné est celui de la facture, comme décrit ci-haut.
+
+{% endmethod %}
+
+
+{% method %}
+### /api/v1/invoices/{INVOICE_ID}/charges/{ID} - `DELETE`
+
+Supprime le paiement d'une facture.
+
+{% sample lang="bash" %}
+```bash 
+
+curl https://app.userboat.com/api/v1/invoices/{INVOICE_ID}/charges/{ID} \
+   -H "Content-Type: application/json" \
+   -H "Authorization: Bearer {ACCESS_TOKEN}"
+```
+
+{% common %}
+L'objet retourné sera vide en cas de succès.
 
 {% endmethod %}

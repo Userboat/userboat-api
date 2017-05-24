@@ -30,7 +30,7 @@ Par défaut lorsqu'un membre vous est retourné, l'ensemble de ces valeurs seron
 ```
 
 {% method %}
-### /api/v1/members - `GET`
+### /api/v1/members/{ID} - `GET`
 
 Récupère les détails d'un membre existant.
 
@@ -41,7 +41,7 @@ Récupère les détails d'un membre existant.
 {% sample lang="bash" %}
 ```bash 
 curl https://app.userboat.com/api/v1/members/{ID} \
-   -H "Content-Type: application/json"
+   -H "Content-Type: application/json" \
    -H "Authorization: Bearer {ACCESS_TOKEN}"
 ```
 
@@ -63,9 +63,9 @@ Crée un membre.
 {% sample lang="bash" %}
 ```bash 
 curl https://app.userboat.com/api/v1/members/{ID} \
-   -H "Content-Type: application/json"
-   -H "Authorization: Bearer {ACCESS_TOKEN}"
-   -d '{"properties": { "email":"COURRIEL" } }'
+   -H "Content-Type: application/json" \
+   -H "Authorization: Bearer {ACCESS_TOKEN}" \
+   -d '{"properties": { "email":"COURRIEL" } }' \
    -d '{"groupIds": [ "ID_GROUP1", "ID_GROUP2" ] }'
 ```
 
@@ -75,7 +75,7 @@ L'objet retourné est celui du membre, comme décrit ci-haut.
 {% endmethod %}
 
 {% method %}
-### /api/v1/members - `PUT`
+### /api/v1/members/{ID} - `PUT`
 
 Met à jour les détails d'un membre existant.
 
@@ -87,8 +87,8 @@ Met à jour les détails d'un membre existant.
 {% sample lang="bash" %}
 ```bash 
 curl https://app.userboat.com/api/v1/members/{ID} \
-   -H "Content-Type: application/json"
-   -H "Authorization: Bearer {ACCESS_TOKEN}"
+   -H "Content-Type: application/json" \
+   -H "Authorization: Bearer {ACCESS_TOKEN}" \
    -d '{"email":"NOUVEAU_COURRIEL"}'
 ```
 
@@ -98,18 +98,14 @@ L'objet retourné est celui du membre, comme décrit ci-haut.
 {% endmethod %}
 
 {% method %}
-### /api/v1/members - `DELETE`
+### /api/v1/members/{ID} - `DELETE`
 
 Supprime un membre.
-
-| Paramètre | Description |
-| :--- | :--- |
-| _id_ | Identifiant unique du membre. |
 
 {% sample lang="bash" %}
 ```bash 
 curl https://app.userboat.com/api/v1/members/{ID} \
-   -H "Content-Type: application/json"
+   -H "Content-Type: application/json" \
    -H "Authorization: Bearer {ACCESS_TOKEN}"
 ```
 
