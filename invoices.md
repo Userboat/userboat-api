@@ -23,7 +23,7 @@ Par défaut lorsqu'une facture vous est retournée, l'ensemble de ces valeurs se
 ```
 
 {% method %}
-### /api/v1/invoices - __`GET`__
+### /api/v1/invoices - `GET`
 
 Récupère les détails d'une facture existante.
 
@@ -44,7 +44,7 @@ L'objet retourné est celui de la facture, comme décrit ci-haut.
 {% endmethod %}
 
 {% method %}
-### /api/v1/invoices - __`DELETE`__
+### /api/v1/invoices - `DELETE`
 
 Supprime une facture.
 
@@ -66,7 +66,7 @@ L'objet retourné sera vide en cas de succès.
 
 
 {% method %}
-### /api/v1/invoices/{INVOICE_ID}/charges - __`POST`__
+### /api/v1/invoices/{INVOICE_ID}/charges - `POST`
 
 Ajouter un paiement à une facture.
 

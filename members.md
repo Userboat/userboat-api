@@ -30,7 +30,7 @@ Par défaut lorsqu'un membre vous est retourné, l'ensemble de ces valeurs seron
 ```
 
 {% method %}
-### /api/v1/members - __`GET`__
+### /api/v1/members - `GET`
 
 Récupère les détails d'un membre existant.
 
@@ -51,7 +51,7 @@ L'objet retourné est celui du membre, comme décrit ci-haut.
 {% endmethod %}
 
 {% method %}
-### /api/v1/members - __`POST`__
+### /api/v1/members - `POST`
 
 Crée un membre.
 
@@ -75,7 +75,7 @@ L'objet retourné est celui du membre, comme décrit ci-haut.
 {% endmethod %}
 
 {% method %}
-### /api/v1/members - __`PUT`__
+### /api/v1/members - `PUT`
 
 Met à jour les détails d'un membre existant.
 
@@ -98,7 +98,7 @@ L'objet retourné est celui du membre, comme décrit ci-haut.
 {% endmethod %}
 
 {% method %}
-### /api/v1/members - __`DELETE`__
+### /api/v1/members - `DELETE`
 
 Supprime un membre.
 
