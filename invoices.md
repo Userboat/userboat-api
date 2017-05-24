@@ -97,6 +97,6 @@ curl https://app.userboat.com/api/v1/invoices/{INVOICE_ID}/charges/{ID} \
 ```
 
 {% common %}
-L'objet retourné sera vide en cas de succès.
+L'objet retourné est celui de la facture, comme décrit ci-haut.
 
 {% endmethod %}
