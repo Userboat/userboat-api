@@ -63,3 +63,28 @@ curl https://app.userboat.com/api/v1/invoices/{ID} \
 L'objet retourné sera vide en cas de succès.
 
 {% endmethod %}
+
+
+{% method %}
+### /api/v1/invoices/{INVOICE_ID}/charges - __`POST`__
+
+Ajouter un paiement à une facture.
+
+| Paramètre | Description |
+| :--- | :--- |
+| _id_ | Identifiant unique de la facture. |
+| _amount_ | Montant payé. Celui-ci peut-être inférieur ou supérieur au total de la facture. |
+| _reference_ | Référence au paiement. Dans le cas de Stripe, celà peut être un idenfiant de paiement. Pour un paiement manuel, un numéro de chèque par exemple. |
+| _note_ | Divers. |
+
+{% sample lang="bash" %}
+```bash 
+curl https://app.userboat.com/api/v1/invoices/{INVOICE_ID}/charges \
+   -H "Content-Type: application/json"
+   -H "Authorization: Bearer {ACCESS_TOKEN}"
+```
+
+{% common %}
+L'objet retourné est celui de la facture, comme décrit ci-haut.
+
+{% endmethod %}
