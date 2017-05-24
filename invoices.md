@@ -6,6 +6,7 @@ Par défaut lorsqu'une facture vous est retournée, l'ensemble de ces valeurs se
 | :--- | :--- |
 | _id_ | Identifiant unique de la facture. Cet identifiant est utilisé pour toutes les méthodes qui requièrent les données d'une facture. |
 | _status_ | C'est le status courant de la facture. `10` représente `Non-payée`, `20` représente `Payée`. |
+| _total_ | Cette propriété représente la montant total de la facture. |
 | _charges_ | Cette propriété l'ensemble des paiements effectués pour la facture. |
 | _paidTime_ | Date du paiement complèt de la facture sous format `UTC`. |
 | _creationTime_ | Date de création de la facture sous format `UTC`. |
