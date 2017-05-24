@@ -8,5 +8,5 @@
 
 * [Authentification](authentification.md)
 * [Membres](members.md)
-* [Factures](invoices.md)
+* [Factures & paiements](invoices.md)
 

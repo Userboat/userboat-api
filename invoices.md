@@ -1,4 +1,4 @@
-# Factures
+# Factures & paiements
 
 Par défaut lorsqu'une facture vous est retournée, l'ensemble de ces valeurs seront retournées systématiquement.
 
@@ -40,5 +40,26 @@ curl https://app.userboat.com/api/invoices/{ID} \
 
 {% common %}
 L'objet retourné est celui de la facture, comme décrit ci-haut.
+
+{% endmethod %}
+
+{% method %}
+### /api/v1/invoices - __`DELETE`__
+
+Supprime une facture.
+
+| Paramètre | Description |
+| :--- | :--- |
+| _id_ | Identifiant unique de la facture. |
+
+{% sample lang="bash" %}
+```bash 
+curl https://app.userboat.com/api/invoices/{ID} \
+   -H "Content-Type: application/json"
+   -H "Authorization: Bearer {ACCESS_TOKEN}"
+```
+
+{% common %}
+L'objet retourné sera vide en cas de succès.
 
 {% endmethod %}
