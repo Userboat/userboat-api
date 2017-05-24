@@ -33,7 +33,7 @@ Récupère les détails d'une facture existante.
 
 {% sample lang="bash" %}
 ```bash 
-curl https://app.userboat.com/api/invoices/{ID} \
+curl https://app.userboat.com/api/v1/invoices/{ID} \
    -H "Content-Type: application/json"
    -H "Authorization: Bearer {ACCESS_TOKEN}"
 ```
@@ -54,7 +54,7 @@ Supprime une facture.
 
 {% sample lang="bash" %}
 ```bash 
-curl https://app.userboat.com/api/invoices/{ID} \
+curl https://app.userboat.com/api/v1/invoices/{ID} \
    -H "Content-Type: application/json"
    -H "Authorization: Bearer {ACCESS_TOKEN}"
 ```
